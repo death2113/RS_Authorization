@@ -12,7 +12,7 @@
         </classes>
         </test>
 
-    <test name="authorization_2">
+    <test name="authorization_1">
         <classes>
             <class name="test_rs.Authorization_1">
                 <methods>
