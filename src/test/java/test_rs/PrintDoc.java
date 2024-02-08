@@ -31,7 +31,7 @@ public class PrintDoc extends Data {
         buttonEnter.click();
 
         WebElement xWait = (new WebDriverWait(driver, Duration.ofSeconds(3)))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='__BVID__79']"))); //явное ожидание поля поика
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='__BVID__79']"))); //явное ожидание поля поиcка
 
         WebElement searchField = driver.findElement(By.xpath("//input[@id='__BVID__79']")); //вводим в поле поиска строку
         searchField.sendKeys(getData.nameOrg);
@@ -45,7 +45,7 @@ public class PrintDoc extends Data {
         WebElement xWait3 = (new WebDriverWait(driver,Duration.ofSeconds(3)))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//td[text()='Соглашение по субсидиям №лесное/доп1']"))); //явное ожидание загрузки ЛК
 
-        WebElement clickable = driver.findElement(By.xpath("//td[text()='Соглашение по субсидиям №лесное/доп1']")); // клик по документу
+        WebElement clickable = driver.findElement(By.xpath("//td[text()='Соглашение по субсидиям №лесное/доп1']")); // даблклик по документу
         new Actions(driver)
                 .doubleClick(clickable)
                 .perform();
