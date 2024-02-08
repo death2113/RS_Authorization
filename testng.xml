@@ -1,2 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/Vika/Documents/RS_Authorization"><classes><class name="java.Authorization"><methods><include name="authorization"/></methods></class></classes></test></suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="All Test Suite">
+        <test name="authorization">
+        <classes>
+            <class name="test_rs.Authorization">
+                <methods>
+                    <include name="authorization"/>
+                </methods>
+            </class>
+        </classes>
+        </test>
+
+    <test name="authorization_1">
+        <classes>
+            <class name="test_rs.Authorization_1">
+                <methods>
+                    <include name="authorization_1"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

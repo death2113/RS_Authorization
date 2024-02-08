@@ -1,4 +1,4 @@
-package java;
+package test_rs;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,9 +10,9 @@ public class Authorization extends Data {
     WebDriver driver = new ChromeDriver();
     Data getData = new Data();
 
-    private By inputLogin = (By.xpath("//*[@id=\"login\"]"));
-    private By inputPassword = (By.xpath("//*[@id=\"password\"]"));
-    private By button = (By.xpath("//*[@type=\"submit\"]"));
+    private By inputLogin = (By.xpath("//*[@id='login']"));
+    private By inputPassword = (By.xpath("//*[@id='password']"));
+    private By button = (By.xpath("//*[@type='submit']"));
 
     @Test
     public void authorization (){
