@@ -13,8 +13,10 @@ public class Authorization_1 extends Data {
     WebDriver driver = new ChromeDriver();
     Data getData = new Data();
 
+
     @Test
     public void authorization () {
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.get(getData.getUrl);
         WebElement inputLogin_1 = driver.findElement(By.xpath("//*[@id='login']"));
         inputLogin_1.sendKeys(getData.login_1);
@@ -22,7 +24,6 @@ public class Authorization_1 extends Data {
         inputPassword_1.sendKeys(getData.password_1);
         WebElement button_1 = driver.findElement(By.xpath("//*[@type='submit']"));
         button_1.click();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         WebElement org_3 = driver.findElement(By.xpath("//div[text()=' Комитет финансов, Сотрудник Комитета финансов (ОМБ) ']"));
         org_3.click();
     }
