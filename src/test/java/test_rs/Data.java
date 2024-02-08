@@ -10,6 +10,9 @@ public class Data {
     public String login_1 = "GRBS6";
     public String password_1 = "GRBS6";
 
+    public String nameOrg = "Лесное";
+
+
 }
 
 

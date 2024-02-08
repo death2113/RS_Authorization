@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="febad371-5469-4942-8bb8-2bb6cd810823" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/src/test/java/test_rs/PrintDoc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test_rs/Authorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test_rs/Authorization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test_rs/Authorization_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test_rs/Authorization_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test_rs/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test_rs/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,25 +60,8 @@
       <recent name="java" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Authorization_1">
-    <configuration name="Authorization (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RS_Authorization" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test_rs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test_rs" />
-      <option name="MAIN_CLASS_NAME" value="test_rs.Authorization" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Authorization" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.PrintDoc.print">
+    <configuration name="Authorization" type="TestNG" nameIsGenerated="true">
       <module name="RS_Authorization" />
       <shortenClasspath name="NONE" />
       <useClassPathOnly />
@@ -101,7 +88,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Authorization_1" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Authorization" type="TestNG" nameIsGenerated="true">
+      <module name="RS_Authorization" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test_rs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test_rs" />
+      <option name="MAIN_CLASS_NAME" value="test_rs.Authorization" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Authorization_1" type="TestNG" nameIsGenerated="true">
       <module name="RS_Authorization" />
       <extension name="coverage">
         <pattern>
@@ -118,7 +122,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Authorization_1.authorization" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Authorization_1.authorization" type="TestNG" nameIsGenerated="true">
       <module name="RS_Authorization" />
       <extension name="coverage">
         <pattern>
@@ -136,7 +140,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Testng" type="TestNG" temporary="true">
+    <configuration name="PrintDoc" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RS_Authorization" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test_rs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test_rs" />
+      <option name="MAIN_CLASS_NAME" value="test_rs.PrintDoc" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrintDoc.print" type="TestNG" nameIsGenerated="true">
+      <module name="RS_Authorization" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test_rs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test_rs" />
+      <option name="MAIN_CLASS_NAME" value="test_rs.PrintDoc" />
+      <option name="METHOD_NAME" value="print" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Testng" type="TestNG">
       <module name="RS_Authorization" />
       <shortenClasspath name="NONE" />
       <useClassPathOnly />
@@ -156,19 +195,17 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="TestNG.PrintDoc.print" />
       <item itemvalue="TestNG.Authorization (1)" />
       <item itemvalue="TestNG.Authorization_1" />
       <item itemvalue="TestNG.Authorization_1.authorization" />
       <item itemvalue="TestNG.Testng" />
       <item itemvalue="TestNG.Authorization" />
+      <item itemvalue="TestNG.PrintDoc" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Authorization_1" />
-        <item itemvalue="TestNG.Testng" />
-        <item itemvalue="TestNG.Authorization_1.authorization" />
-        <item itemvalue="TestNG.Authorization (1)" />
-        <item itemvalue="TestNG.Authorization" />
+        <item itemvalue="TestNG.PrintDoc" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +220,7 @@
       <workItem from="1707235210777" duration="11616000" />
       <workItem from="1707284936524" duration="1616000" />
       <workItem from="1707288240026" duration="25465000" />
-      <workItem from="1707372033926" duration="3317000" />
+      <workItem from="1707372033926" duration="14300000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1707384085398</created>
@@ -192,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707384085398</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1">
+      <created>1707403988985</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707403988985</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

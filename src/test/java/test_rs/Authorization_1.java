@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class Authorization_1 extends Data {
@@ -16,15 +17,21 @@ public class Authorization_1 extends Data {
 
     @Test
     public void authorization () {
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3)); //неявное ожидание
+
         driver.get(getData.getUrl);
+
         WebElement inputLogin_1 = driver.findElement(By.xpath("//*[@id='login']"));
         inputLogin_1.sendKeys(getData.login_1);
+
         WebElement inputPassword_1 = driver.findElement(By.xpath("//*[@id='password']"));
         inputPassword_1.sendKeys(getData.password_1);
+
         WebElement button_1 = driver.findElement(By.xpath("//*[@type='submit']"));
         button_1.click();
+
         WebElement org_3 = driver.findElement(By.xpath("//div[text()=' Комитет финансов, Сотрудник Комитета финансов (ОМБ) ']"));
         org_3.click();
+
     }
 }

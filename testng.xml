@@ -16,7 +16,17 @@
         <classes>
             <class name="test_rs.Authorization_1">
                 <methods>
-                    <include name="authorization_1"/>
+                    <include name="authorization"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="print">
+        <classes>
+            <class name="test_rs.PrintDoc">
+                <methods>
+                    <include name="printDoc"/>
                 </methods>
             </class>
         </classes>
