@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="febad371-5469-4942-8bb8-2bb6cd810823" name="Changes" comment="1">
+    <list default="true" id="febad371-5469-4942-8bb8-2bb6cd810823" name="Changes" comment="added TabletList">
+      <change afterPath="$PROJECT_DIR$/src/test/java/test_rs/TableList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test_rs/Authorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test_rs/Authorization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test_rs/Authorization_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test_rs/Authorization_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test_rs/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test_rs/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test_rs/PrintDoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test_rs/PrintDoc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +26,39 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="github/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="2" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -40,11 +78,11 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Vika/Documents/RS_Authorization/testng.xml&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Vika/Documents/RS_Authorization&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -55,20 +93,14 @@
       <recent name="java" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.PrintDoc.print">
-    <configuration name="Authorization" type="TestNG" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.PrintDoc">
+    <configuration name="Authorization" type="TestNG">
       <module name="RS_Authorization" />
       <shortenClasspath name="NONE" />
       <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="java.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="java" />
-      <option name="MAIN_CLASS_NAME" value="java.Authorization" />
+      <option name="PACKAGE_NAME" value="test_rs" />
+      <option name="MAIN_CLASS_NAME" value="test_rs.Authorization" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="PARAMETERS" value="" />
@@ -117,25 +149,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Authorization_1.authorization" type="TestNG" nameIsGenerated="true">
-      <module name="RS_Authorization" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test_rs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test_rs" />
-      <option name="MAIN_CLASS_NAME" value="test_rs.Authorization_1" />
-      <option name="METHOD_NAME" value="authorization" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PrintDoc" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PrintDoc" type="TestNG" nameIsGenerated="true">
       <module name="RS_Authorization" />
       <extension name="coverage">
         <pattern>
@@ -152,36 +166,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrintDoc.print" type="TestNG" nameIsGenerated="true">
+    <configuration name="TableList" type="TestNG" nameIsGenerated="true">
       <module name="RS_Authorization" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="test_rs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="test_rs" />
-      <option name="MAIN_CLASS_NAME" value="test_rs.PrintDoc" />
-      <option name="METHOD_NAME" value="print" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Testng" type="TestNG">
-      <module name="RS_Authorization" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="test_rs.TableList" />
       <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="PARAMETERS" value="" />
       <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
       <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
@@ -190,19 +194,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.PrintDoc.print" />
-      <item itemvalue="TestNG.Authorization (1)" />
       <item itemvalue="TestNG.Authorization_1" />
-      <item itemvalue="TestNG.Authorization_1.authorization" />
-      <item itemvalue="TestNG.Testng" />
-      <item itemvalue="TestNG.Authorization" />
       <item itemvalue="TestNG.PrintDoc" />
+      <item itemvalue="TestNG.TableList" />
+      <item itemvalue="TestNG.Authorization" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="TestNG.PrintDoc" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -215,7 +211,11 @@
       <workItem from="1707235210777" duration="11616000" />
       <workItem from="1707284936524" duration="1616000" />
       <workItem from="1707288240026" duration="25465000" />
-      <workItem from="1707372033926" duration="14999000" />
+      <workItem from="1707372033926" duration="18569000" />
+      <workItem from="1707591388420" duration="17319000" />
+      <workItem from="1707976562298" duration="29378000" />
+      <workItem from="1708022815114" duration="764000" />
+      <workItem from="1708061094004" duration="8047000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1707384085398</created>
@@ -238,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707418248530</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1">
+      <created>1707418911707</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707418911707</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +265,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="added TabletList" />
+    <option name="LAST_COMMIT_MESSAGE" value="added TabletList" />
   </component>
 </project>

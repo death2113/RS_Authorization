@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import static test_rs.Authorization_1.driver; //импорт драйвера
 
 public class PrintDoc extends Data {
 
@@ -30,31 +31,33 @@ public class PrintDoc extends Data {
         WebElement buttonEnter = driver.findElement(By.xpath("//*[@type='submit']"));  //кнопка войти
         buttonEnter.click();
 
-        WebElement xWait = (new WebDriverWait(driver, Duration.ofSeconds(3)))
+        WebElement xWait = (new WebDriverWait(driver, Duration.ofSeconds(10)))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='__BVID__79']"))); //явное ожидание поля поиcка
 
         WebElement searchField = driver.findElement(By.xpath("//input[@id='__BVID__79']")); //вводим в поле поиска строку
         searchField.sendKeys(getData.nameOrg);
 
-        WebElement xWait2 = (new WebDriverWait(driver, Duration.ofSeconds(3)))
+        WebElement xWait2 = (new WebDriverWait(driver, Duration.ofSeconds(10)))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@type='button']"))); //явное ожидание кнопки организации
 
         WebElement buttonOrg = driver.findElement(By.xpath("//button[@type='button']")); //клик по кнопке организации
         buttonOrg.click();
 
-        WebElement xWait3 = (new WebDriverWait(driver,Duration.ofSeconds(3)))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//td[text()='Соглашение по субсидиям №лесное/доп1']"))); //явное ожидание загрузки ЛК
+        WebElement xWait3 = (new WebDriverWait(driver,Duration.ofSeconds(10)))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody[@role='rowgroup']"))); //явное ожидание загрузки ЛК
 
-        WebElement clickable = driver.findElement(By.xpath("//td[text()='Соглашение по субсидиям №лесное/доп1']")); // даблклик по документу
+        WebElement clickable = driver.findElement(By.xpath("//tbody[@role='rowgroup']//tr[@role='row']")); // даблклик по документу
         new Actions(driver)
                 .doubleClick(clickable)
                 .perform();
 
-       WebElement xWait4 = (new WebDriverWait(driver,Duration.ofSeconds(3)))
+       WebElement xWait4 = (new WebDriverWait(driver,Duration.ofSeconds(10)))
                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='btn mr-1 btn-outline-primary e-btn btn-huge']"))); //явное ожидание кнопки печать
 
         WebElement buttonPrint = driver.findElement(By.xpath("//button[@class='btn mr-1 btn-outline-primary e-btn btn-huge']")); //печать
         buttonPrint.click();
     }
+
+
 
 }

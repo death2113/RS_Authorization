@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="All Test Suite">
-        <test name="authorization">
+        <test name="Authorization">
         <classes>
             <class name="test_rs.Authorization">
                 <methods>
@@ -12,11 +12,11 @@
         </classes>
         </test>
 
-    <test name="authorization_1">
+    <test name="authoriz">
         <classes>
             <class name="test_rs.Authorization_1">
                 <methods>
-                    <include name="authorization"/>
+                    <include name="authorization_1"/>
                 </methods>
             </class>
         </classes>
@@ -27,6 +27,16 @@
             <class name="test_rs.PrintDoc">
                 <methods>
                     <include name="printDoc"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Table">
+        <classes>
+            <class name="test_rs.TableList">
+                <methods>
+                    <include name="tableList"/>
                 </methods>
             </class>
         </classes>

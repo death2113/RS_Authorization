@@ -1,0 +1,110 @@
+Index: src/test/java/test_rs/PrintDoc.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package test_rs;\r\n\r\nimport org.openqa.selenium.By;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.WebElement;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\nimport org.openqa.selenium.interactions.Actions;\r\nimport org.openqa.selenium.support.ui.ExpectedConditions;\r\nimport org.openqa.selenium.support.ui.WebDriverWait;\r\nimport org.testng.annotations.Test;\r\n\r\nimport java.time.Duration;\r\n\r\npublic class PrintDoc extends Data {\r\n\r\n    WebDriver driver = new ChromeDriver();\r\n    Data getData = new Data();\r\n\r\n    @Test\r\n    public void printDoc () {\r\n\r\n        driver.get(getData.getUrl);\r\n\r\n        WebElement inputLogin_2 = driver.findElement(By.xpath(\"//*[@id='login']\"));  //ввод логина\r\n        inputLogin_2.sendKeys(getData.login_1);\r\n\r\n        WebElement inputPass_2 = driver.findElement(By.xpath(\"//*[@id='password']\")); //ввод пароля\r\n        inputPass_2.sendKeys(getData.password_1);\r\n\r\n        WebElement buttonEnter = driver.findElement(By.xpath(\"//*[@type='submit']\"));  //кнопка войти\r\n        buttonEnter.click();\r\n\r\n        WebElement xWait = (new WebDriverWait(driver, Duration.ofSeconds(3)))\r\n                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(\"//input[@id='__BVID__79']\"))); //явное ожидание поля поиcка\r\n\r\n        WebElement searchField = driver.findElement(By.xpath(\"//input[@id='__BVID__79']\")); //вводим в поле поиска строку\r\n        searchField.sendKeys(getData.nameOrg);\r\n\r\n        WebElement xWait2 = (new WebDriverWait(driver, Duration.ofSeconds(3)))\r\n                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(\"//button[@type='button']\"))); //явное ожидание кнопки организации\r\n\r\n        WebElement buttonOrg = driver.findElement(By.xpath(\"//button[@type='button']\")); //клик по кнопке организации\r\n        buttonOrg.click();\r\n\r\n        WebElement xWait3 = (new WebDriverWait(driver,Duration.ofSeconds(3)))\r\n                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(\"//td[text()='Соглашение по субсидиям №лесное/доп1']\"))); //явное ожидание загрузки ЛК\r\n\r\n        WebElement clickable = driver.findElement(By.xpath(\"//td[text()='Соглашение по субсидиям №лесное/доп1']\")); // даблклик по документу\r\n        new Actions(driver)\r\n                .doubleClick(clickable)\r\n                .perform();\r\n\r\n       WebElement xWait4 = (new WebDriverWait(driver,Duration.ofSeconds(3)))\r\n               .until(ExpectedConditions.presenceOfElementLocated(By.xpath(\"//button[@class='btn mr-1 btn-outline-primary e-btn btn-huge']\"))); //явное ожидание кнопки печать\r\n\r\n        WebElement buttonPrint = driver.findElement(By.xpath(\"//button[@class='btn mr-1 btn-outline-primary e-btn btn-huge']\")); //печать\r\n        buttonPrint.click();\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/test_rs/PrintDoc.java b/src/test/java/test_rs/PrintDoc.java
+--- a/src/test/java/test_rs/PrintDoc.java	(revision 370a4bf5a23039495dc28bde4f1a42ab3b7eecd3)
++++ b/src/test/java/test_rs/PrintDoc.java	(date 1707591329234)
+@@ -57,4 +57,6 @@
+         buttonPrint.click();
+     }
+ 
++
++
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"febad371-5469-4942-8bb8-2bb6cd810823\" name=\"Changes\" comment=\"1\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2c04XyZsEDDLaL138y0bDYwVO4W\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/Vika/Documents/RS_Authorization/testng.xml&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Vika\\Documents\\RS_Authorization\\src\\test\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"java\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"TestNG.PrintDoc.print\">\r\n    <configuration name=\"Authorization\" type=\"TestNG\" nameIsGenerated=\"true\">\r\n      <module name=\"RS_Authorization\" />\r\n      <shortenClasspath name=\"NONE\" />\r\n      <useClassPathOnly />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"java.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"SUITE_NAME\" value=\"\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"java\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"java.Authorization\" />\r\n      <option name=\"GROUP_NAME\" value=\"\" />\r\n      <option name=\"TEST_OBJECT\" value=\"CLASS\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"OUTPUT_DIRECTORY\" value=\"\" />\r\n      <option name=\"TEST_SEARCH_SCOPE\">\r\n        <value defaultName=\"moduleWithDependencies\" />\r\n      </option>\r\n      <option name=\"PROPERTIES_FILE\" value=\"\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Authorization\" type=\"TestNG\" nameIsGenerated=\"true\">\r\n      <module name=\"RS_Authorization\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"test_rs.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"test_rs\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"test_rs.Authorization\" />\r\n      <option name=\"TEST_OBJECT\" value=\"CLASS\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Authorization_1\" type=\"TestNG\" nameIsGenerated=\"true\">\r\n      <module name=\"RS_Authorization\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"test_rs.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"test_rs\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"test_rs.Authorization_1\" />\r\n      <option name=\"TEST_OBJECT\" value=\"CLASS\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Authorization_1.authorization\" type=\"TestNG\" nameIsGenerated=\"true\">\r\n      <module name=\"RS_Authorization\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"test_rs.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"test_rs\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"test_rs.Authorization_1\" />\r\n      <option name=\"METHOD_NAME\" value=\"authorization\" />\r\n      <option name=\"TEST_OBJECT\" value=\"METHOD\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"PrintDoc\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"RS_Authorization\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"test_rs.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"test_rs\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"test_rs.PrintDoc\" />\r\n      <option name=\"TEST_OBJECT\" value=\"CLASS\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"PrintDoc.print\" type=\"TestNG\" nameIsGenerated=\"true\">\r\n      <module name=\"RS_Authorization\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"test_rs.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"test_rs\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"test_rs.PrintDoc\" />\r\n      <option name=\"METHOD_NAME\" value=\"print\" />\r\n      <option name=\"TEST_OBJECT\" value=\"METHOD\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Testng\" type=\"TestNG\">\r\n      <module name=\"RS_Authorization\" />\r\n      <shortenClasspath name=\"NONE\" />\r\n      <useClassPathOnly />\r\n      <option name=\"SUITE_NAME\" value=\"$PROJECT_DIR$/testng.xml\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"\" />\r\n      <option name=\"METHOD_NAME\" value=\"\" />\r\n      <option name=\"GROUP_NAME\" value=\"\" />\r\n      <option name=\"TEST_OBJECT\" value=\"SUITE\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"OUTPUT_DIRECTORY\" value=\"\" />\r\n      <option name=\"PROPERTIES_FILE\" value=\"\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"TestNG.PrintDoc.print\" />\r\n      <item itemvalue=\"TestNG.Authorization (1)\" />\r\n      <item itemvalue=\"TestNG.Authorization_1\" />\r\n      <item itemvalue=\"TestNG.Authorization_1.authorization\" />\r\n      <item itemvalue=\"TestNG.Testng\" />\r\n      <item itemvalue=\"TestNG.Authorization\" />\r\n      <item itemvalue=\"TestNG.PrintDoc\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"TestNG.PrintDoc\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"febad371-5469-4942-8bb8-2bb6cd810823\" name=\"Changes\" comment=\"\" />\r\n      <created>1707235208988</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1707235208988</updated>\r\n      <workItem from=\"1707235210777\" duration=\"11616000\" />\r\n      <workItem from=\"1707284936524\" duration=\"1616000\" />\r\n      <workItem from=\"1707288240026\" duration=\"25465000\" />\r\n      <workItem from=\"1707372033926\" duration=\"14999000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"1\">\r\n      <created>1707384085398</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1707384085398</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"1\">\r\n      <created>1707403988985</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1707403988985</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"1\">\r\n      <created>1707418248530</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1707418248530</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"1\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"1\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 370a4bf5a23039495dc28bde4f1a42ab3b7eecd3)
++++ b/.idea/workspace.xml	(date 1707591374894)
+@@ -6,6 +6,7 @@
+   <component name="ChangeListManager">
+     <list default="true" id="febad371-5469-4942-8bb8-2bb6cd810823" name="Changes" comment="1">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/test_rs/PrintDoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test_rs/PrintDoc.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -20,7 +21,33 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <excluded-from-favorite>
++      <branch-storage>
++        <map>
++          <entry type="LOCAL">
++            <value>
++              <list>
++                <branch-info repo="$PROJECT_DIR$" source="master" />
++              </list>
++            </value>
++          </entry>
++          <entry type="REMOTE">
++            <value>
++              <list>
++                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
++              </list>
++            </value>
++          </entry>
++        </map>
++      </branch-storage>
++    </excluded-from-favorite>
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="2" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -191,7 +218,6 @@
+     </configuration>
+     <list>
+       <item itemvalue="TestNG.PrintDoc.print" />
+-      <item itemvalue="TestNG.Authorization (1)" />
+       <item itemvalue="TestNG.Authorization_1" />
+       <item itemvalue="TestNG.Authorization_1.authorization" />
+       <item itemvalue="TestNG.Testng" />
+@@ -200,6 +226,7 @@
+     </list>
+     <recent_temporary>
+       <list>
++        <item itemvalue="TestNG.PrintDoc" />
+         <item itemvalue="TestNG.PrintDoc" />
+       </list>
+     </recent_temporary>
+@@ -215,7 +242,7 @@
+       <workItem from="1707235210777" duration="11616000" />
+       <workItem from="1707284936524" duration="1616000" />
+       <workItem from="1707288240026" duration="25465000" />
+-      <workItem from="1707372033926" duration="14999000" />
++      <workItem from="1707372033926" duration="18569000" />
+     </task>
+     <task id="LOCAL-00001" summary="1">
+       <created>1707384085398</created>
+@@ -238,7 +265,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1707418248530</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="1">
++      <created>1707418911707</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1707418911707</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
