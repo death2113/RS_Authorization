@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="febad371-5469-4942-8bb8-2bb6cd810823" name="Changes" comment="added TabletList">
-      <change afterPath="$PROJECT_DIR$/src/test/java/test_rs/TableList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/test_rs/TableList_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_02_2024_21_55_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_02_2024_21_55_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_02_2024_21_55__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_02_2024_21_55__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_02_2024_21_57_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_02_2024_21_57__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_02_2024_21_38_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_02_2024_21_38__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_02_2024_21_57_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_02_2024_21_57__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test_rs/Authorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test_rs/Authorization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test_rs/Authorization_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test_rs/Authorization_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test_rs/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test_rs/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test_rs/PrintDoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test_rs/PrintDoc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test_rs/TableList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test_rs/TableList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +101,7 @@
       <recent name="java" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.PrintDoc">
+  <component name="RunManager" selected="TestNG.TableList">
     <configuration name="Authorization" type="TestNG">
       <module name="RS_Authorization" />
       <shortenClasspath name="NONE" />
@@ -193,12 +201,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TableList_2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RS_Authorization" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test_rs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test_rs" />
+      <option name="MAIN_CLASS_NAME" value="test_rs.TableList_2" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="TestNG.Authorization_1" />
       <item itemvalue="TestNG.PrintDoc" />
       <item itemvalue="TestNG.TableList" />
       <item itemvalue="TestNG.Authorization" />
+      <item itemvalue="TestNG.TableList_2" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.TableList_2" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -215,7 +246,7 @@
       <workItem from="1707591388420" duration="17319000" />
       <workItem from="1707976562298" duration="29378000" />
       <workItem from="1708022815114" duration="764000" />
-      <workItem from="1708061094004" duration="8047000" />
+      <workItem from="1708061094004" duration="30272000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1707384085398</created>
@@ -245,7 +276,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707418911707</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added TabletList">
+      <created>1708075040002</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708075040002</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added TabletList">
+      <created>1708075352376</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708075352376</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

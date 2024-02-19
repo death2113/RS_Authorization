@@ -33,10 +33,23 @@ public class TableList {
             WebElement wait3 = (new WebDriverWait(driver, Duration.ofSeconds(10))) //ожидание наименования
                     .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody[@role='rowgroup']//tr[@role='row']//td[@class='border-0 w-10']")));
 
-            List<WebElement> table = driver.findElements(By.xpath("//tbody[@role='rowgroup']//tr[@role='row']")); //вытаскиваем все строки
-            for (int i = 0; i < table.size(); i++) {
-                String name = (table.get(i).getText());
-                System.out.println(name);
+            WebElement table = driver.findElement(By.xpath("//tbody[@role='rowgroup']")); //находим таблицу
+
+            List<WebElement> Rows = table.findElements(By.xpath("//tbody[@role='rowgroup']//tr[@role='row']")); //строки
+            int rows_count = Rows.size(); //количество строк
+            //System.out.println(rows_count);
+
+            List<WebElement> Columns = table.findElements(By.xpath("//tbody[@role='rowgroup']//tr[@role='row']//td[@role='cell']")); //колонки
+            int columns_count = Columns.size(); //количество колонок
+            //System.out.println(columns_count);
+
+
+            for (int i = 0; i < rows_count; i++) {
+                List<WebElement> columns_from_rows = Rows.get(i).findElements(By.xpath("//tbody[@role='rowgroup']//tr[@role='row']//td[@role='cell']")); // получаем колонки  из строк
+                for (int j = 0; j < columns_count; j++) {
+                    String col_tx = columns_from_rows.get(j).getText(); //получаем значения из колонок
+                    System.out.println("Str " + i + " - " + " Colum " + j + " - " + col_tx);
+                }
             }
 
         } finally {
