@@ -33,28 +33,30 @@ public class TableList {
             WebElement wait3 = (new WebDriverWait(driver, Duration.ofSeconds(10))) //ожидание наименования
                     .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody[@role='rowgroup']//tr[@role='row']//td[@class='border-0 w-10']")));
 
-            WebElement table = driver.findElement(By.xpath("//tbody[@role='rowgroup']")); //находим таблицу
+            WebElement innerTable = driver.findElement(By.xpath("//tbody[@role='rowgroup']")); //таблица
 
-            List<WebElement> Rows = table.findElements(By.xpath("//tbody[@role='rowgroup']//tr[@role='row']")); //строки
+            List<WebElement> Rows = innerTable.findElements(By.xpath("//tbody[@role='rowgroup']//tr")); //строки
             int rows_count = Rows.size(); //количество строк
             //System.out.println(rows_count);
 
-            List<WebElement> Columns = table.findElements(By.xpath("//tbody[@role='rowgroup']//tr[@role='row']//td[@role='cell']")); //колонки
+            List<WebElement> Columns = innerTable.findElements(By.xpath("//tbody[@role='rowgroup']//tr[@role='row']//td")); //колонки
             int columns_count = Columns.size(); //количество колонок
             //System.out.println(columns_count);
 
-
-            for (int i = 0; i < rows_count; i++) {
-                List<WebElement> columns_from_rows = Rows.get(i).findElements(By.xpath("//tbody[@role='rowgroup']//tr[@role='row']//td[@role='cell']")); // получаем колонки  из строк
-                for (int j = 0; j < columns_count; j++) {
-                    String col_tx = columns_from_rows.get(j).getText(); //получаем значения из колонок
-                    System.out.println("Str " + i + " - " + " Colum " + j + " - " + col_tx);
+            for (int j = 0; j < rows_count; j++) { //строки
+                List<WebElement> columns_from_rows = Rows.get(j).findElements(By.xpath("//tbody[@role='rowgroup']//tr//td")); // получаем колонки  из строк
+                for (int k = 0; k <= columns_count; k++) { //колонки
+                    String columnsName = columns_from_rows.get(k).getText(); //получаем значения из колонок
+                    System.out.println(columnsName);
                 }
+                System.out.println();
             }
-
         } finally {
             driver.quit();  //завершаем работу драйвера
+
         }
     }
 }
+
+
 
