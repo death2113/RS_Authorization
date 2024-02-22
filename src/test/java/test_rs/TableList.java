@@ -1,5 +1,6 @@
 package test_rs;
 
+import org.json.JSONObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -55,6 +56,37 @@ public class TableList {
             driver.quit();  //завершаем работу драйвера
 
         }
+    }
+
+    @Test
+    public void Test1337(){
+        JSONObject Table = new JSONObject();
+        Authorization auth = new Authorization(); //вызов авторизации
+        auth.authorization();
+
+        WebElement wait = (new WebDriverWait(driver, Duration.ofSeconds(10)))  //ожидание ссылки Соглашения
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//ul[@class='nav nav-tabs']//li[@class='nav-item main-page']//a[contains(@href,'/agreement/main/documents')]")));
+
+        WebElement butt = driver.findElement(By.xpath("//ul[@class='nav nav-tabs']//li[@class='nav-item main-page']//a[contains(@href,'/agreement/main/documents')]"));
+        butt.click(); //кликаем на ссылку Соглашения
+
+        WebElement wait3 = (new WebDriverWait(driver, Duration.ofSeconds(10))) //ожидание наименования
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr")));
+
+
+        int RowCol = driver.findElements(By.xpath("//tbody/tr")).size();
+        int ColumnCol = Integer.parseInt(driver.findElement(By.xpath("//table")).getAttribute("aria-colcount"));
+        for (int i = 1; i<=RowCol; i++){
+            JSONObject Row = new JSONObject();
+            for (int j = 1; j<=ColumnCol; j++){
+                Row.put(driver.findElement(By.xpath("//thead/tr/th[@aria-colindex='"+j+"']/div")).getText(),
+                        driver.findElement(By.xpath("//tbody/tr["+i+"]/td[@aria-colindex='"+j+"']")).getText());
+            }
+            Table.put(String.valueOf(i), Row);
+        }
+        System.out.println(Table.toString(4));
+
+        System.out.println("----------------------------------\n"+ Table.getJSONObject("4").toString(4));
     }
 }
 
